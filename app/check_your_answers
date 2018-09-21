@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Check your information before sharing your property details
+      </h1>
+
+      <h2 class="govuk-heading-m">
+          Solicitor details
+      </h2>
+
+      <dl class="app-check-your-answers app-check-your-answers--long">
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Full name
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            Natasha powell
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="/docs/examples/pass-data/vehicle-registration">
+              Change <span class="govuk-visually-hidden"> full name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Email address
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            natashapowell@movr.com
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="/docs/examples/pass-data/vehicle-type">
+              Change <span class="govuk-visually-hidden">email address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Reference number
+          </dt>
+          <dd class="app-check-your-answers__answer">
+           ABC123X
+          </dd>
+          <dd class="app-check-your-answers__change">
+            <a href="/docs/examples/pass-data/vehicle-features">
+              Change <span class="govuk-visually-hidden">reference number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <p>
+        <a href="/docs/tutorials-and-examples">
+          Return to Prototype Kit examples
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+
+{% endblock %}
