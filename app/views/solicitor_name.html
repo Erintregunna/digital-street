@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Example - Passing data
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="start_page.html">Start page</a>
+          </li>
+        </ol>
+        <div>
+
+      <form action="/docs/examples/pass-data/solicitor_name" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="solicitor_name">
+              Solicitor's full name
+            </label>
+          </h1>
+          <input class="govuk-input" id="solicitor_name" name="solicitor_name" value="{{ data['solicitor_name'] }}" type="text">
+        </div>
+      </div>
+
+
+<a href="solicitor_email.html" role="button" class="govuk-button">Continue</a>
+</div>
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

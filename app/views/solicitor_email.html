@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Example - Passing data
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="start_page">Start page</a>
+          </li>
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="solicitor_name">Solicitor name</a>
+              </li>
+            </ol>
+          </div>
+
+      <form action="/docs/examples/pass-data/solicitor_email" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="solicitor_email">
+              Solicitor's email address
+            </label>
+          </h1>
+          <input class="govuk-input" id="registration-number" name="solicitor_email" value="{{ data['solicitor_email'] }}" type="text">
+        </div>
+
+        <a href="reference_number.html" role="button" class="govuk-button">Continue</a>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
