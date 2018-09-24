@@ -25,7 +25,7 @@
               Solicitor's full name
             </label>
           </h1>
-          <input class="govuk-input" id="solicitor_name" name="solicitor_name" value="{{ data['solicitor_name'] }}" type="text">
+          <input class="govuk-input govuk-!-width-one-third" id="solicitor_name" name="solicitor_name" value="{{ data['solicitor_name'] }}" type="text">
         </div>
       </div>
 
@@ -33,7 +33,18 @@
 <a href="solicitor_email.html" role="button" class="govuk-button">Continue</a>
 </div>
       </form>
-
+      <div>
+        <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            I don't know this information
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          We need this information so that we can share your property details with your solicitor. Please contact them for further help.
+        </div>
+      </details>
+      </div>
     </div>
   </div>
 {% endblock %}

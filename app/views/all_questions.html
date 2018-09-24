@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Example - Passing data
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="start_page">Start page</a>
+          </li>
+        </ol>
+
+        <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        Who's your solicitor?
+      </h1>
+    </legend>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="full_name">
+        Full name
+        <span class="govuk-visually-hidden">line 1 of 2</span>
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="email_address" name="email_address" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-2">
+        Email address
+        <span class="govuk-visually-hidden">line 2 of 2</span>
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-line-2" name="address-line-2" type="text">
+    </div>
+
+    <div class="govuk-form-group">
+    <label class="govuk-label" for="reference_number">
+        Reference number
+    </label>
+    <input class="govuk-input govuk-!-width-one-third" id="reference_number" name="reference_number" type="text">
+  </div>
+
+  <div>
+<a href="check_your_answers.html" role="button" class="govuk-button">Continue</a>
+</div>
+
+<div>
+  <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      I don't know this information
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    We need this information so that we can share your property details with your solicitor. Please contact them for further help.
+  </div>
+</details>
+</div>
+{% endblock %}
