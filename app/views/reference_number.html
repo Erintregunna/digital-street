@@ -15,31 +15,29 @@
             <a class="govuk-breadcrumbs__link" href="start_page">Start page</a>
           </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/solicitor_email">Solicitor's email address</a>
+            <a class="govuk-breadcrumbs__link" href="solicitor_name">Solicitor's name</a>
           </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="solicitor_name">Solicitor's name</a>
+            <a class="govuk-breadcrumbs__link" href="/solicitor_email">Solicitor's email address</a>
           </li>
         </ol>
       </div>
-      <form action="/docs/examples/pass-data/solicitor_email" method="post" class="form">
+      <form action="/views/includes/check_your_answers" method="post" class="form">
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="reference_number">
-              Solicitor reference number
-            </label>
-          </h1>
-               <span id="reference-error" class="govuk-error-message">
-                  Enter your reference number in the right format
-                </span>
-              <span id="reference-hint" class="govuk-hint">
-                  For example, MR1234.
-                  Your solicitor will have given you this.
-              </span>
-          <input class="govuk-input govuk-input--error govuk-!-width-one-third" id="reference_number" name="reference_number" value="{{ data['reference_number'] }}" type="text" aria-describedby="reference_number-hint reference_number-error">
 
-      </div>
+      <div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label gov-uk-label--xl" for="reference_number">
+    <h1> Solicitor's reference number </h1>
+  </label>
+  <span id="reference_hint" class="govuk-hint">
+    For example, MR1234. <br>
+    Your solicitor will have given you this.
+  </span>
+  <span id="reference_number_error" class="govuk-error-message">
+    Enter your reference number in the right format
+  </span>
+  <input class="govuk-input govuk-input--error govuk-!-width-one-third" id="reference_number" name="reference_number" type="text" aria-describedby="reference_hint reference_number_error" value="{{ data['reference_number'] }}" >
+</div>
 
         <a href="check_your_answers.html" role="button" class="govuk-button">Continue</a>
 
