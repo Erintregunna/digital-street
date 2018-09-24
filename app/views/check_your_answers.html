@@ -12,8 +12,13 @@ Check your answers
         Check and confirm your solicitor's details
       </h1>
 <div>
-      <p> Please check the details you've provided for your solcitor.
-          Don't continue until you're completely happy that the details are correct.
+  <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    Please check the details you've provided for your solcitor.
+    <b> Don't continue  until you're completely happy that the details are correct. </b>
+  </strong>
 </div>
       <h2 class="govuk-heading-m">
           Solicitor details
@@ -25,10 +30,10 @@ Check your answers
             Full name
           </dt>
           <dd class="app-check-your-answers__answer">
-            <p>{{ data['full_name'] }}</p>
+            <p> {{ data['full_name'] }} </p>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="solicitor_name">
+            <a href="solicitor_name.html">
               Change <span class="govuk-visually-hidden"> full name</span>
             </a>
           </dd>
@@ -38,10 +43,10 @@ Check your answers
             Email address
           </dt>
           <dd class="app-check-your-answers__answer">
-            <p>"{{ data['solicitor_email'] }}"</p>
+            <p> {{ data['solicitor_email'] }} </p>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="solicitor_email">
+            <a href="solicitor_email.html">
               Change <span class="govuk-visually-hidden">email address</span>
             </a>
           </dd>
@@ -51,7 +56,7 @@ Check your answers
             Reference number
           </dt>
           <dd class="app-check-your-answers__answer">
-            <p>"{{ data['reference_number'] }}"</p>
+            <p> {{ data['reference_number'] }} </p>
           </dd>
           <dd class="app-check-your-answers__change">
             <a href="reference_number.html">
