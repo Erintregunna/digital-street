@@ -22,17 +22,24 @@
           </li>
         </ol>
       </div>
-
       <form action="/docs/examples/pass-data/solicitor_email" method="post" class="form">
 
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="solicitor_email">
+            <label class="govuk-label govuk-label--m" for="reference_number">
               Solicitor reference number
             </label>
           </h1>
-          <input class="govuk-input govuk-!-width-one-third" id="reference_number" name="reference_number" value="{{ data['reference_numberl'] }}" type="text">
-        </div>
+               <span id="reference-error" class="govuk-error-message">
+                  Enter your reference number in the right format
+                </span>
+              <span id="reference-hint" class="govuk-hint">
+                  For example, MR1234.
+                  Your solicitor will have given you this.
+              </span>
+          <input class="govuk-input govuk-input--error govuk-!-width-one-third" id="reference_number" name="reference_number" value="{{ data['reference_number'] }}" type="text" aria-describedby="reference_number-hint reference_number-error">
+
+      </div>
 
         <a href="check_your_answers.html" role="button" class="govuk-button">Continue</a>
 
