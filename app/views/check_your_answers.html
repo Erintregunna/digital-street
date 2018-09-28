@@ -30,10 +30,10 @@ Check your answers
             Full name
           </dt>
           <dd class="app-check-your-answers__answer">
-            <p> {{ data['full_name'] }} </p>
+            <p> {{ data['solicitor_name'] }} </p>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="views/includes/solicitor_name">
+            <a href="/check_name">
               Change <span class="govuk-visually-hidden"> full name</span>
             </a>
           </dd>
@@ -46,7 +46,7 @@ Check your answers
             <p> {{ data['solicitor_email'] }} </p>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="/views/includes/solicitor_email">
+            <a href="/check_email">
               Change <span class="govuk-visually-hidden">email address</span>
             </a>
           </dd>
@@ -59,14 +59,14 @@ Check your answers
             <p> {{ data['case_number'] }} </p>
           </dd>
           <dd class="app-check-your-answers__change">
-            <a href="views/includes/reference_number">
-              Change <span class="govuk-visually-hidden">reference number</span>
+            <a href="/check_number">
+              Change <span class="govuk-visually-hidden">case number</span>
             </a>
           </dd>
         </div>
       </dl>
 
-      <a href="invited_solicitor.html" role="button" class="govuk-button">Confirm details</a>
+      <a href="/invited_solicitor" role="button" class="govuk-button">Confirm details</a>
 
     </div>
 

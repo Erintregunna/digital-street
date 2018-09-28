@@ -15,9 +15,7 @@
             <a class="govuk-breadcrumbs__link" href="start_page.html">Start page</a>
           </li>
         </ol>
-        <div>
-
-      <form action="/views/includes/check_your_answers" method="post" class="form">
+      <form action= "{{ redirect_url }}" method="post" class="form">
 
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
@@ -25,26 +23,21 @@
             <h1>  Solicitor's full name </h1>
             </label>
           </h1>
-          <input class="govuk-input govuk-!-width-two-thirds" id="solicitor_name" name="solicitor_name" value="{{ data['solicitor_names'] }}" type="text">
+          <input class="govuk-input govuk-!-width-two-thirds" id="solicitor_name" name="solicitor_name" value="{{ data['solicitor_name'] }}" type="text">
+          <button class="govuk-button">Continue</button>
         </div>
-      </div>
-
-
-<a href="solicitor_email.html" role="button" class="govuk-button">Continue</a>
-</div>
       </form>
-      <div>
-        <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            I don't know this information
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          We need this information so that we can share your property details with your solicitor. Please contact them if you need any help.
-        </div>
-      </details>
-      </div>
     </div>
+      <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          I don't know this information
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <span>We need this information so that we can share your property details with your solicitor. Please contact them if you need any help.</span>
+      </div>
+    </details>
   </div>
+</div>
 {% endblock %}

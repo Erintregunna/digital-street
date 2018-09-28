@@ -21,7 +21,7 @@
             </ol>
           </div>
 
-      <form action="/views/includes/check_your_answers" method="post" class="form">
+      <form action= "{{ redirect_url }}" method="post" class="form">
 
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
@@ -35,7 +35,7 @@
           <input class="govuk-input govuk-!-width-two-thirds" id="solicitor_email" name="solicitor_email" value="{{ data['solicitor_email'] }}" type="text">
         </div>
 
-        <a href="reference_number.html" role="button" class="govuk-button">Continue</a>
+        <button class="govuk-button">Continue</button>
 
       </form>
       <div>
