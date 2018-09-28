@@ -24,16 +24,21 @@
             <h1>  Solicitor's full name </h1>
             </label>
           </h1>
-          
+
           {% if e %}
             <span id="solicitor_name_error" class="govuk-error-message">
-              Enter your solicitor's name.
+              Enter your solicitor's full name.
             </span>
           {% endif %}
 
           <input class="govuk-input {% if e %}govuk-input--error{% endif %} govuk-!-width-two-thirds" id="solicitor_name" name="solicitor_name" value="{{ data['solicitor_name'] }}" type="text">
+<div>
+  <br>
+
           <button class="govuk-button">Continue</button>
+
         </div>
+
       </form>
     </div>
       <details class="govuk-details">
