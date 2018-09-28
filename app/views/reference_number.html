@@ -22,10 +22,10 @@
           </li>
         </ol>
       </div>
-      <form action="/views/includes/check_your_answers" method="post" class="form">
+      <form action="/reference_number" method="post" class="form">
 
 
-      <div class="govuk-form-group govuk-form-group--error">
+      <div class="govuk-form-group {% if e %}govuk-form-group--error {% endif %}">
   <label class="govuk-label gov-uk-label--xl" for="reference_number">
     <h1> Solicitor's case number </h1>
   </label>
@@ -33,13 +33,15 @@
     For example, MR1234. <br>
     Your solicitor will have given you this.
   </span>
-  <span id="reference_number_error" class="govuk-error-message">
-    Enter your case number in the right format
-  </span>
-  <input class="govuk-input govuk-input--error govuk-!-width-one-third" id="case_number" name="case_number" type="text" aria-describedby="case_hint case_number_error" value="{{ data['case_number'] }}" >
+  {% if e %}
+    <span id="reference_number_error" class="govuk-error-message">
+      Enter your case number in the right format
+    </span>
+  {% endif %}
+  <input class="govuk-input {% if e %}govuk-input--error{% endif %} govuk-!-width-one-third" id="case_number" name="case_number" type="text" aria-describedby="case_hint case_number_error" value="{{ data['case_number'] }}" >
 </div>
 
-        <a href="check_your_answers.html" role="button" class="govuk-button">Continue</a>
+    <button class="govuk-button">Continue</button>
 
       </form>
       <div>
