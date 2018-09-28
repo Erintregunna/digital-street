@@ -23,7 +23,7 @@
 
       <form action= "{{ redirect_url }}" method="post" class="form">
 
-        <div class="govuk-form-group">
+        <div class="govuk-form-group {% if e %}govuk-form-group--error {% endif %}">
           <h1 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--m" for="solicitor_email">
             <h1>  Solicitor's email address </h1>
@@ -32,7 +32,12 @@
           <span id="email-hint" class="govuk-hint">
               For example, solicitor@example.com.
           </span>
-          <input class="govuk-input govuk-!-width-two-thirds" id="solicitor_email" name="solicitor_email" value="{{ data['solicitor_email'] }}" type="text">
+          {% if e %}
+            <span id="solicitor_email_error" class="govuk-error-message">
+              Enter your solicitor's email address.
+            </span>
+          {% endif %}
+          <input class="govuk-input {% if e %}govuk-input--error{% endif %} govuk-!-width-two-thirds" id="solicitor_email" name="solicitor_email" value="{{ data['solicitor_email'] }}" type="text">
         </div>
 
         <button class="govuk-button">Continue</button>
