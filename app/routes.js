@@ -18,6 +18,7 @@ router.post('/solicitor_name', function(req, res){
   }
     res.redirect('/solicitor_email')
 })
+
 router.get('/solicitor_email', function(req, res){
     res.render('solicitor_email.html', {'redirect_url': '/solicitor_email','e': false})
 })
