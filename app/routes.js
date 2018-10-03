@@ -11,14 +11,13 @@ router.get('/start_page', function(req, res){
 router.get('/solicitor_name', function(req, res){
     return res.render('solicitor_name.html', {'redirect_url': '/solicitor_name', 'e': false})
 })
-
+//passing data with error messages//
 router.post('/solicitor_name', function(req, res){
   if (req.body['solicitor_name'] =='' ){
       return res.render('solicitor_name.html', {'redirect_url': '/solicitor_name','e': true})
   }
     res.redirect('/solicitor_email')
 })
-
 router.get('/solicitor_email', function(req, res){
     res.render('solicitor_email.html', {'redirect_url': '/solicitor_email','e': false})
 })
